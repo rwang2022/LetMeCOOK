@@ -1,3 +1,7 @@
+Wed Jul 24 2024
+1 hour: set up .env instructions in README.md
+next: try to set up Google Sign-In
+
 Tue Jul 16 2024
 30 min: Hello World
 next: add TypeScript support
