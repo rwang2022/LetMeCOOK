@@ -19,6 +19,13 @@ This is an app.
          9.  Click `Create` to get your `Client ID` and `Client Secret`.
       2. `SESSION_SECRET` should be a long random string. You can obtain one by running `node -e "console.log(require('crypto').randomBytes(64).toString('hex'));"` in the terminal
       3. `DATABASE_URL`: your Postgres database details
+         1. Install Postgres if you haven't already. The set up should tell you `$database_user`, `$mypassword`, and `$port`
+            1. `$database_user` is usually the `postgres` superuser (but can be another user that you created)
+            2. You should know your `$mypassword`
+            3. `$port` is usually `5432`
+         2. Run `psql -U $database_user` to log into that user
+         3. Run `CREATE DATABASE $database_name;` (don't forget the `;`, name can be something like `LetMeCOOK`)
+         4. You should now have filled out `DATABASE_URL` with all the required information.
 4. Run `node app.js`
 5. Go to http://localhost:3000/
 
