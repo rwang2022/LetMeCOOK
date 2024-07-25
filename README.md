@@ -25,7 +25,7 @@ This is an app.
             3. `$port` is usually `5432`
          2. Run `psql -U $database_user` to log into that user
          3. Run `CREATE DATABASE $database_name;` (don't forget the `;`, name can be something like `LetMeCOOK`)
-         4. You should now have filled out `DATABASE_URL` with all the required information.
+         4. Run `exit`. You should now have filled out `DATABASE_URL` with all the required information.
 4. Run `node app.js`
 5. Go to http://localhost:3000/
 
