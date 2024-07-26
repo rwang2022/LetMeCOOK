@@ -1,7 +1,7 @@
 # Let Me COOK
 This is an app.
 
-# Instructions
+# Instructions for devs
 1. Clone the repo and `cd` into it
 2. Run `npm install`
 3. Make a copy of the `.env_template` file, rename it to `.env`, and edit `$variables` with your own
@@ -29,6 +29,30 @@ This is an app.
 4. Run `node app.js`
 5. Go to http://localhost:3000/
 
+# Things we learned
+## Postgres
+```SQL
+-- logs into $user
+# psql -U $user 
+
+-- create database (don't forget the semicolon)
+# CREATE DATABASE LetMeCOOK;
+```
+
+## Routing
+```js
+// '/' is the URI or API endpoint
+app.get('/', (req,res) => {
+    res.send('Hello World!')
+})
+
+// '/helloworld' is the URI or API endpoint
+app.get('/helloWorld', (req,res) => {
+    res.send('Hello World! from hello')
+})
+
+// you send HTTP requests (GET, POST, etc.) to API endpoints
+```
 
 # Contributors
 1. Erika Nelson
