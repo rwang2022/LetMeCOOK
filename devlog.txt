@@ -1,3 +1,9 @@
+Sat Jul 27 2024
+1 hour: 
+    - erky got Google Auth to work until callback
+    - ryan got session to work 
+next: try to set up users database
+
 Fri Jul 26 2024
 1 hour: attempted Google Sign-In, do not understand yet
 next: try to finish Google Sign-In
