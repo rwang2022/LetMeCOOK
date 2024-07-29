@@ -1,3 +1,10 @@
+Sun Jul 28 2024
+1 hour:
+    - going over how cookies/sessions work (userId, hash function, secret key)
+    - why are cookies secure: false in app.js (doesn't work otherwise)
+    - successfully connected to rapidapp Postgres database, new env variable
+next: run some database commands from the backend 
+
 Sat Jul 27 2024
 1 hour: 
     - erky got Google Auth to work until callback

@@ -54,6 +54,11 @@ app.get('/helloWorld', (req,res) => {
 // you send HTTP requests (GET, POST, etc.) to API endpoints
 ```
 
+## Sessions, Cookies
+Cookies are a way for a site to know if you've logged in before. It's a signature that is obtained after they hash your userId along with a secret_key after a successful login. This signature is given to the user who just signed in. The browser stores this signature, so the user is allowed to stay logged in even after closing the tab. This saves time; the user doesn't need to type in their password EVERY time. 
+
+The signature `=hash(userId, secretKey)` is made up of three pieces: 1. userId 2. hash function 3. developer's secret key. It is conceivable for the hacker to guess a userId as well as the hash function. But the secret key is some random string that they have no way of knowing. So the hacker has no way of figuring out a valid signature to that userId. And thus they cannot use cookies as a way to hack into some random person's account. 
+
 # Contributors
 1. Erika Nelson
 2. Ryan Wang
