@@ -1,13 +1,10 @@
 const pg = require('pg');
-var { connectionString } = require('pg/lib/defaults');
 const { Client } = pg;
 
 require('dotenv').config();
 
-connectionString = process.env.CONNECTION_STRING;
-
 const client = new Client({
-    connectionString,
+    connectionString: process.env.CONNECTION_STRING,
 })
 
 client.connect().then((rsp) => {
