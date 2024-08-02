@@ -2,9 +2,11 @@ Fri Aug 2 2024
 1 hour:
     - create_tables.js: created and accessed the tables through commandline
     - the command for accessing is in lessons_learned.md
-    - 
-
-next: erky will see if she can get a GitHub login 
+    - * we were working on db.js trying to add an ingredient to the ingredients 
+        table through an API endpoint
+next: 
+    - finish working on 3rd bullet (*) 
+    - erky will see if she can get a GitHub login 
 
 Sun Jul 28 2024
 1 hour:
