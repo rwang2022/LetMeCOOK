@@ -1,3 +1,10 @@
+Sat Aug 3 2024
+1 hour: 
+    - db.js successfully adds ingredients via 'POST /create_ingredients'
+    - added unique_name constraint to name column in ingredients table
+        - this means that you can't add "eggs" twice
+next: try to let user add an ingredient besides "eggs" "poultry"
+
 Fri Aug 2 2024
 1 hour:
     - create_tables.js: created and accessed the tables through commandline

@@ -1,7 +1,14 @@
 const pg = require('pg');
 const { Client } = pg;
-
+const express = require('express')
+const app = express()
+const port = 3000
 require('dotenv').config();
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
+
 
 const client = new Client({
     connectionString: process.env.CONNECTION_STRING,
@@ -13,8 +20,6 @@ client.connect().then((rsp) => {
     console.log(err)
 })
 
-// ! UNTESTED CODE
-const app = express()
 
 app.post('/create_ingredient', async (req, res) => {
     const text = 'INSERT INTO Ingredients(name, category) VALUES($1, $2) RETURNING *';

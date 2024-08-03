@@ -46,7 +46,7 @@ app.get('/auth/google/failure', (req, res) => {
 
 app.get('/auth/protected', isLoggedIn, (req, res) => {
     let name = req.user.displayName;
-    res.send(`Hello ${name}`);
+    res.send(`Hello, ${name}`);
 });
 
 app.use('/auth/logout', (req, res) => {
