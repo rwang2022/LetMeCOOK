@@ -1,3 +1,8 @@
+Tue Aug 13 2024
+30 min:
+    - trying to make create_ingredient with user values
+next: keep trying to make create_ingredient with user values
+
 Sat Aug 3 2024
 1 hour: 
     - db.js successfully adds ingredients via 'POST /create_ingredients'

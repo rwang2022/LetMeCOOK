@@ -21,9 +21,14 @@ client.connect().then((rsp) => {
 })
 
 
+
 app.post('/create_ingredient', async (req, res) => {
+    // ! THIS IS THE NEW LINE
+    const { name, category } = req.body;
+    
     const text = 'INSERT INTO Ingredients(name, category) VALUES($1, $2) RETURNING *';
-    const values = ['eggs', 'poultry'];
+    // ! dynamic, instead of values=["apples", "fruit"]
+    const values = [name, category];
 
     try {
         const result = await client.query(text, values);
