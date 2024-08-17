@@ -3,13 +3,18 @@ const { Client } = pg;
 const express = require('express')
 const app = express()
 const port = 3000
+
 require('dotenv').config();
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`);
 })
 
+app.get('/', (req, res) => {
+    res.sendFile('index.html', { root: '.' })
+})
 
+// Connecting to the database 
 const client = new Client({
     connectionString: process.env.CONNECTION_STRING,
 })
@@ -20,7 +25,7 @@ client.connect().then((rsp) => {
     console.log(err)
 })
 
-app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
 app.post('/create_ingredient', async (req, res) => {
     console.log(req.body);
