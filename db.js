@@ -20,14 +20,13 @@ client.connect().then((rsp) => {
     console.log(err)
 })
 
-
+app.use(express.json());
 
 app.post('/create_ingredient', async (req, res) => {
-    // ! THIS IS THE NEW LINE
+    console.log(req.body);
     const { name, category } = req.body;
     
     const text = 'INSERT INTO Ingredients(name, category) VALUES($1, $2) RETURNING *';
-    // ! dynamic, instead of values=["apples", "fruit"]
     const values = [name, category];
 
     try {
